@@ -29,8 +29,7 @@ interface AppMainProps {
 }
 
 // 2. Pasamos la interfaz a React.FC y desestructuramos la función en los argumentos
-const AppMain: React.FC<AppMainProps> = ({ onNavigateToLanding }) => {
-  
+const AppMain: React.FC<AppMainProps> = () => {  
   // =========================================================================
   // Tus estados globales se quedan exactamente igual abajo:
   // =========================================================================
