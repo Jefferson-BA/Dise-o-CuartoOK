@@ -24,9 +24,16 @@ import {
 } from 'lucide-react';
 import type { Owner, Room, Complaint, CurrentUser } from './types';
 import { INITIAL_BLACKLIST, INITIAL_OWNERS, INITIAL_ROOMS, INITIAL_COMPLAINTS } from './services/dataService';
+interface AppMainProps {
+  onNavigateToLanding: () => void;
+}
 
-const AppMain: React.FC = () => {
-  // Global React States
+// 2. Pasamos la interfaz a React.FC y desestructuramos la función en los argumentos
+const AppMain: React.FC<AppMainProps> = ({ onNavigateToLanding }) => {
+  
+  // =========================================================================
+  // Tus estados globales se quedan exactamente igual abajo:
+  // =========================================================================
   const [currentUser, setCurrentUser] = useState<CurrentUser>({
     isLoggedIn: false,
     role: 'guest',
